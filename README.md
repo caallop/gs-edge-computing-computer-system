@@ -1,85 +1,76 @@
-O SOLARIA é um sistema de monitoramento ambiental desenvolvido com Arduino Uno capaz de coletar dados de luminosidade, temperatura, umidade e presença de gases no ambiente. A partir dessas informações, o sistema realiza uma análise simples das condições monitoradas e classifica a situação em três níveis: normal, atenção ou crítico.
+# ☀️ SOLARIA
 
-O projeto utiliza indicadores visuais através de LEDs e alertas sonoros por meio de um buzzer para informar rapidamente o estado do ambiente monitorado.
+## 📖 Descrição do Projeto
 
-**objetivo**
+O SOLARIA é um sistema embarcado desenvolvido com Arduino Uno que simula o monitoramento de tempestades solares. Utilizando sensores de luminosidade, gás, temperatura e umidade, o sistema analisa condições ambientais e classifica o cenário em níveis de risco, emitindo alertas visuais e sonoros quando necessário.
 
-O o projeto demonstra como sistemas embarcados podem ser utilizados para monitoramento em tempo real de condições ambientais, auxiliando na identificação de situações potencialmente perigosas.
+---
 
-A solução busca simular um sistema de alerta capaz de detectar alterações significativas nos sensores e informar os usuários por meio de sinais visuais e sonoros, permitindo uma resposta rápida diante de possíveis riscos.
+## 🎯 Objetivo da Solução
 
-**materiais**
+Demonstrar como tecnologias de monitoramento podem ser utilizadas para antecipar situações críticas, simulando a detecção de eventos solares capazes de impactar redes elétricas, telecomunicações e outras infraestruturas essenciais.
 
-Componentes Utilizados
-Hardware
-1 Arduino Uno
-1 Sensor de Temperatura e Umidade DHT22
-1 Sensor de Gás MQ
-1 Sensor de Luminosidade (LDR)
-1 LED Verde
-1 LED Amarelo
-1 LED Vermelho
-3 Resistores para os LEDs
-1 Buzzer Piezoelétrico
-1 Protoboard
-Jumpers para conexão
-Software
-Arduino IDE
-Biblioteca DHT Sensor Library
+---
 
-**Explicação do Funcionamento**
+## 🛠️ Componentes Utilizados
 
-O SOLARIA simula um sistema de monitoramento de eventos solares capaz de identificar condições que podem representar riscos para infraestruturas críticas, como redes elétricas, satélites e sistemas de telecomunicação.
+- Arduino Uno
+- Sensor DHT22
+- Sensor de Gás MQ
+- Sensor de Luminosidade (LDR)
+- LED Verde
+- LED Amarelo
+- LED Vermelho
+- Buzzer
+- Resistores
+- Protoboard
+- Jumpers
 
-Como a medição real de fenômenos espaciais exige equipamentos especializados e satélites em órbita, o projeto utiliza sensores eletrônicos para representar diferentes variáveis ambientais associadas aos efeitos de uma tempestade solar.
+---
 
-Variáveis Monitoradas
-Intensidade de Radiação Solar (Simulada)
+## ⚙️ Funcionamento
 
-Representada pelo sensor LDR.
+O sistema realiza leituras contínuas dos sensores e interpreta os dados como uma simulação de atividade solar.
 
-O aumento da luminosidade captada pelo sensor simula a elevação da atividade solar e da radiação proveniente do Sol. Valores mais elevados indicam maior intensidade do fenômeno monitorado.
+- ☀️ **LDR:** representa a intensidade de radiação solar.
+- 🌫️ **MQ:** simula a presença de partículas energéticas na atmosfera.
+- 🌡️ **DHT22:** monitora temperatura e umidade.
 
-Partículas Energéticas na Atmosfera (Simuladas)
+Com base nos valores coletados, o sistema classifica a situação em três estados:
 
-Representadas pelo sensor MQ.
+- 🟢 Operação Normal
+- 🟡 Atenção
+- 🔴 Alerta Crítico
 
-Neste projeto, o sensor de gás é utilizado como uma abstração para representar o aumento da concentração de partículas energéticas liberadas durante eventos solares extremos.
+Em situações críticas, o buzzer é acionado e um alerta é exibido no monitor serial.
 
-Temperatura Operacional
+---
 
-Representada pelo sensor DHT22.
+## 🔌 Estrutura do Circuito
 
-A temperatura auxilia na análise das condições gerais do ambiente monitorado, servindo como um parâmetro complementar para a classificação dos níveis de alerta.
+| Componente | Pino Arduino |
+|------------|--------------|
+| DHT22 | D2 |
+| LED Verde | D3 |
+| LED Amarelo | D4 |
+| LED Vermelho | D5 |
+| Buzzer | D6 |
+| LDR | A0 |
+| MQ | A1 |
 
-Umidade Relativa do Ar
+---
 
-Também medida pelo DHT22.
+## ▶️ Instruções de Execução
 
-Embora não esteja diretamente relacionada à atividade solar, a umidade é registrada para complementar o monitoramento ambiental realizado pelo sistema.
+1. Instale a Arduino IDE.
+2. Instale a biblioteca **DHT Sensor Library**.
+3. Monte o circuito conforme o esquema do projeto.
+4. Carregue o arquivo `solaria.ino` para o Arduino Uno.
+5. Abra o Monitor Serial em **9600 baud**.
+6. Observe os valores dos sensores e os alertas gerados pelo sistema.
 
-**Lógica de Monitoramento**
+---
 
-O sistema cruza as informações coletadas pelos sensores para determinar o nível de risco associado à atividade solar simulada.
+## 🚀 Resultado Esperado
 
-Operação Normal
-
-Os indicadores permanecem dentro dos limites seguros.
-
-LED verde aceso.
-Nenhum alerta sonoro.
-Atenção
-
-São detectados sinais moderados de aumento da atividade solar simulada.
-
-LED amarelo aceso.
-Aviso exibido no Monitor Serial.
-Alerta Crítico
-
-São detectados níveis elevados de radiação e partículas energéticas simuladas.
-
-LED vermelho aceso.
-Buzzer ativado.
-Alerta crítico exibido no Monitor Serial.
-
-Esse cenário representa uma possível tempestade solar capaz de impactar sistemas tecnológicos e infraestruturas críticas.
+O sistema deve monitorar continuamente as condições simuladas de atividade solar, indicando visualmente e sonoramente o nível de risco identificado e auxiliando na tomada de decisões preventivas.

@@ -4,13 +4,11 @@
 
 O SOLARIA é um sistema embarcado desenvolvido com Arduino Uno que simula o monitoramento de tempestades solares. Utilizando sensores de luminosidade, gás, temperatura e umidade, o sistema analisa condições ambientais e classifica o cenário em níveis de risco, emitindo alertas visuais e sonoros quando necessário.
 
----
 
 ## 🎯 Objetivo da Solução
 
 Demonstrar como tecnologias de monitoramento podem ser utilizadas para antecipar situações críticas, simulando a detecção de eventos solares capazes de impactar redes elétricas, telecomunicações e outras infraestruturas essenciais.
 
----
 
 ## 🛠️ Componentes Utilizados
 
@@ -25,8 +23,6 @@ Demonstrar como tecnologias de monitoramento podem ser utilizadas para antecipar
 - Resistores
 - Protoboard
 - Jumpers
-
----
 
 ## ⚙️ Funcionamento
 
@@ -44,7 +40,6 @@ Com base nos valores coletados, o sistema classifica a situação em três estad
 
 Em situações críticas, o buzzer é acionado e um alerta é exibido no monitor serial.
 
----
 
 ## 🔌 Estrutura do Circuito
 
@@ -58,7 +53,6 @@ Em situações críticas, o buzzer é acionado e um alerta é exibido no monitor
 | LDR | A0 |
 | MQ | A1 |
 
----
 
 ## ▶️ Instruções de Execução
 
@@ -69,7 +63,10 @@ Em situações críticas, o buzzer é acionado e um alerta é exibido no monitor
 5. Abra o Monitor Serial em **9600 baud**.
 6. Observe os valores dos sensores e os alertas gerados pelo sistema.
 
----
+OU
+
+utilize a versão web que já foi montada:
+https://wokwi.com/projects/465127349110605825
 
 ## 🚀 Resultado Esperado
 

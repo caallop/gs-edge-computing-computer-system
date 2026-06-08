@@ -61,7 +61,8 @@ Em situações críticas, o buzzer é acionado e um alerta é exibido no monitor
 
 ## 📷 Circuito
 
-![Circuito SOLARIA](imagens/circuito.png)
+![Circuito SOLARIA](./img/circuito.png)
+
 
 ## ▶️ Instruções de Execução
 

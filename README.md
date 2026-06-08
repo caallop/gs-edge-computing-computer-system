@@ -83,7 +83,10 @@ O sistema deve monitorar continuamente as condições simuladas de atividade sol
 
 ## 👤 Integrantes
 
-Valéria da silva barbosa - RM: 573829
-Luiz Felipe Izumi - RM : 572328
-Rafael Boneti Nonato de Souza - RM: 571628
+Valéria da silva barbosa - RM: 573829 
+
+Luiz Felipe Izumi - RM : 572328 
+
+Rafael Boneti Nonato de Souza - RM: 571628 
+
 Guilherme Rosa Lopes - RM 569000

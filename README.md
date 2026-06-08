@@ -56,8 +56,8 @@ Em situações críticas, o buzzer é acionado e um alerta é exibido no monitor
 | LED Amarelo | D4 |
 | LED Vermelho | D5 |
 | Buzzer | D6 |
-| LDR | A0 |
-| MQ | A1 |
+| MQ | A0 |
+| LDR | A1 |
 
 ## 📷 Circuito
 
